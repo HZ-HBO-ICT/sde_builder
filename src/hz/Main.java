@@ -7,14 +7,13 @@ public class Main {
         ConsoleWriter writer = new ConsoleWriter();
 
         // Let's construct an email
-        EmailBuilder builder = new EmailBuilder();
-        builder.addressAMadam("Els");
-        builder.talkAboutMe("Andries Nieuwenhuize", "University of Applied Scienes");
-        builder.showInterest("Maxxton");
-        builder.tellHowToContactMe();
-        builder.sayThanks();
+        EnglishEmailBuilder builder = new EnglishEmailBuilder();
 
-        String email = builder.getEmail();
+        EmailDirector director = new EmailDirector(builder);
+
+        director.ChangeBuilder(new DutchEmailBuilder());
+
+        String email = director.makeEmailApplyForInternship();
 
         writer.writeLine(email);
     }
