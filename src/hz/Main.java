@@ -9,8 +9,8 @@ public class Main {
         // Let's construct an email
         EmailBuilder builder = new EmailBuilder();
         builder.addressAMadam("Els");
-        builder.talkAboutMe("Andries Nieuwenhuize", "University of Applied Scienes");
-        builder.showInterest("Maxxton");
+        builder.talkAboutMe("<Set-Name>", "<Set-University>");
+        builder.showInterest("<Set-Company>");
         builder.tellHowToContactMe();
         builder.sayThanks();
 
